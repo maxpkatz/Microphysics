@@ -4,7 +4,7 @@
 #include <network_properties.H>
 #include <eos_data.H>
 #include <eos_type.H>
-#include <eos_F.H>
+//#include <eos_F.H>
 #include <eos_composition.H>
 #include <eos_override.H>
 #include <actual_eos.H>
@@ -50,12 +50,12 @@ void eos_init() {
   // possible EOS quantities. We will reset them to be equal to the EOS minimum
   // if they are smaller than that.
 
-  Real scratch;
-  eos_get_small_temp(&scratch);
-  EOSData::mintemp = scratch;
+//  Real scratch;
+//  eos_get_small_temp(&scratch);
+//  EOSData::mintemp = scratch;
 
-  eos_get_small_dens(&scratch);
-  EOSData::mindens = scratch;
+//  eos_get_small_dens(&scratch);
+//  EOSData::mindens = scratch;
 
   EOSData::initialized = true;
 

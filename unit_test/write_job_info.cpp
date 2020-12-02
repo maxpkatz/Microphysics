@@ -162,6 +162,4 @@ void write_job_info(const std::string& dir) {
     jobinfo_file_name[i] = FullPathJobInfoFile[i];
   }
 
-  runtime_pretty_print(jobinfo_file_name.dataPtr(), &jobinfo_file_length);
-
 }

@@ -42,6 +42,8 @@ include $(AMREX_HOME)/Tools/GNUMake/Make.defs
 
 MICROPHYSICS_AUTO_SOURCE_DIR := $(TmpBuildDir)/microphysics_sources/$(optionsSuffix).EXE
 
+NETWORK_OUTPUT_PATH := $(MICROPHYSICS_AUTO_SOURCE_DIR)
+
 all: build_status $(executable) starkiller_library
 	@echo SUCCESS
 
@@ -121,7 +123,6 @@ Bpack  += $(foreach dir, $(Pdirs), $(AMREX_HOME)/Src/$(dir)/Make.package)
 #------------------------------------------------------------------------------
 # microphysics
 #------------------------------------------------------------------------------
-NETWORK_OUTPUT_PATH := $(MICROPHYSICS_AUTO_SOURCE_DIR)
 
 include $(MICROPHYSICS_HOME)/Make.Microphysics_extern
 
@@ -155,7 +156,6 @@ INCLUDE_LOCATIONS += $(MICROPHYSICS_AUTO_SOURCE_DIR)
 #------------------------------------------------------------------------------
 
 # runtime parameter support for extern/ routines
-F90EXE_sources += extern.F90
 CEXE_sources += extern_parameters.cpp
 FEXE_headers += extern_parameters_F.H
 CEXE_headers += extern_parameters.H
