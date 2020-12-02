@@ -13,7 +13,6 @@ using namespace amrex;
 #include <test_react.H>
 #include <test_react_F.H>
 #include <extern_parameters.H>
-#include <eos.H>
 #include <network.H>
 #include <rhs_zones.H>
 #include <AMReX_buildInfo.H>
@@ -34,7 +33,6 @@ void main_main ()
     BoxArray ba;
     Geometry geom;
 
-    eos_init();
     network_init();
 
     int Ncomp = 100;
