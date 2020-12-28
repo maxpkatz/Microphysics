@@ -1,0 +1,7 @@
+n_cell = 1
+
+do_cxx = 1
+
+prefix = react_iso7_
+
+amr.probin_file = probin.iso7_1
