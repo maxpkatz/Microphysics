@@ -1,0 +1,11 @@
+# Maximum amount any quantity can change by in a timestep
+sum_X_tolerance                real               1.0e-4
+
+# Guess for initial dt as a fraction of time interval
+dt_init_fraction               real               1.0e-4
+
+# Maximum factor that dt is allowed to grow per timestep
+dt_max_change_factor           real               1.05
+
+# Factor to shrink the timestep by when mass conservation is violated
+dt_cut_factor                  real               0.95
