@@ -1,4 +1,16 @@
 @namespace: integrator
 
 # Maximum amount any quantity can change by in a timestep
-maximum_timestep_change_factor           real            1.01
+maximum_timestep_change_factor           real            2.0
+
+# Maximum number of iterations on the timestep constraint loop
+num_timestep_iters                       integer         10
+
+# Maximum factor that dt is allowed to grow per timestep
+dt_max_change_factor                     real            1.25
+
+# Multiply the timestep by this factor when we outright reject it
+dt_cut_factor                            real            0.5
+
+# Scale factor for initial timestep
+dt_init_fraction                         real            0.01
